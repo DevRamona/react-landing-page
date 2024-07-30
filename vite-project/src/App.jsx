@@ -6,6 +6,8 @@ import Clients from "./Components/Clients"
 import Data from "./Components/Data"
 import ProjectImages from './Components/ProjectImages'
 import Projects from "./Components/Projects"
+import Features from './Components/Features'
+import FeaturesData from './Components/FeaturesData'
 function App() {
   
   
@@ -23,6 +25,12 @@ function App() {
       img = {image.img}/>
     ))
 
+    const featuresInfo = FeaturesData.map(feature => (
+      <Features
+      img = {feature.img}
+      title = {feature.title}
+      paragraph = {feature.paragraph}/>
+    ))
   return (
     <div>
        <h1 className=" text-3xl">WHAT OUR CLIENTS SAY</h1>
@@ -35,6 +43,11 @@ function App() {
        <div className='grid grid-cols-3 grid-rows-3'>
         {projectTitle}
 
+
+       </div>
+       <h1 className='text-3xl font-semibold mt-9'>FEATURES</h1>
+       <div className='grid grid-cols-4 gap-10 mt-9 '>
+        {featuresInfo}
        </div>
       
     </div>
