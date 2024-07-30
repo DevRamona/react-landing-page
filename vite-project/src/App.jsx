@@ -10,6 +10,8 @@ import Features from './Components/Features'
 import FeaturesData from './Components/FeaturesData'
 import Services from './Components/Services'
 import servicesData from './Components/servicesData'
+import teamData from './Components/teamData'
+import Team from './Components/Team'
 function App() {
   
   
@@ -40,6 +42,13 @@ function App() {
       title = {service.title}
       content = {service.content}/>
     )
+
+    const teamInfo = teamData.map(team => 
+      <Team
+      img ={team.img}
+      name = {team.fullName}
+      role = {team.role}/>
+    )
   return (
     <div>
        <h1 className=" text-3xl">WHAT OUR CLIENTS SAY</h1>
@@ -67,6 +76,11 @@ function App() {
        <p className='mb-24'>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
        <div className='grid grid-cols-3 grid-rows-2 gap-8 p-20'>
         {servicesInfo}
+
+       </div>
+
+       <div className='grid grid-cols-4'>
+        {teamInfo}
 
        </div>
        
