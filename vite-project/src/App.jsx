@@ -54,10 +54,13 @@ function App() {
 
 
        </div>
+       <div className='bg-gray-200 p-8'>
        <h1 className='text-3xl font-semibold mt-9'>FEATURES</h1>
        <div className='grid grid-cols-4 gap-10 mt-9 '>
         {featuresInfo}
        </div>
+       </div>
+       
 
        <div className='bg-blue-500 mt-16 text-white'>
        <h1 className='text-3xl font-bold mb-10'>OUR SERVICES</h1>
